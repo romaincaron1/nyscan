@@ -1,0 +1,195 @@
+.navbar {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: $boxshadow;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    
+    .scrolling-btn {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 5rem;
+
+        button {
+            padding: 0;
+            margin-right: 1rem;
+            font-size: 2rem;
+            border: none;
+            background: none;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+
+    .logo {
+        position: absolute;
+        top: 0.5rem;
+        left: 1rem;
+        
+        img {
+            height: 4rem;
+        }
+    }
+
+    .navbar-container {
+        height: 0;
+        overflow: hidden;
+
+        ul {
+
+            li:not(.logo) {
+                
+                .name {
+                    color: $blue;
+                    display: none;
+                }
+
+                a, button {
+                    text-align: center;
+                    padding: 0.5rem 0;
+                    display: block;
+                    text-decoration: none;
+                    color: $blue;
+                    cursor: pointer;
+
+                    &:hover {
+                        transition: 0.3s;
+                        background-color: rgb(221, 221, 221);
+                    }
+                }
+            }
+        }
+
+        &.display {
+            margin-top: 1rem;
+            height: 14.3rem;
+            transition: 0.8s ease;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .navbar {
+        .scrolling-btn {
+            display: none;
+        }
+
+        .logo {
+            top: 0.8rem;
+        }
+
+        .navbar-container {
+            transition: none;
+            height: 6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &.display {
+                margin-top: 0;
+                height: 6rem;
+                transition: none;
+            }
+
+            .center {
+                width: 66%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                ul {
+                    width: 60%;
+                }
+            }
+
+            .right {
+                height: 100%;
+                display: flex;
+                width: 33%;
+
+                ul {
+
+                    .name {
+                        display: inherit;
+                    }
+                    gap: 2rem;
+                    justify-content: center;
+                }
+            }
+
+            ul {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: space-evenly;
+
+                li {
+
+                    .name {
+                        display: inherit !important;
+                    }
+
+                    a {
+                        &.sign-btn {
+                            border-radius: 5%;
+                            color: #E5E5E5;
+                            padding: 0.7rem 1.8rem 0.4rem 1.8rem;
+                            background-color: #6C5B7B;
+
+                            &:hover {
+                                color: #E5E5E5;
+                                background-color: #365063 !important;
+                            }
+                        }
+
+                        &:hover {
+                            background-color: #fff !important;
+                            color: $purple;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .navbar {
+
+        .logo {
+            position: inherit;
+            
+        }
+
+        .navbar-container {
+
+            ul {
+                justify-content: center;
+                gap: 2rem;
+            }
+
+            .left {
+                width: 33%;
+            }
+
+            .center {
+                width: 33%;
+                ul {
+                    width: 100%;
+                }
+            }
+
+            .right {
+                width: 33%;
+
+                ul {
+                    justify-content: flex-end;
+                    margin-right: 6rem;
+                }
+            }
+        }
+    }
+}

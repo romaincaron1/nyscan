@@ -1,0 +1,48 @@
+.scan {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+    .infos {
+        margin-bottom: 2rem;
+        color: #e5e5e5;
+        background-color: #6c5b7b;
+        padding: 0.8rem 1rem;
+        text-align: center;
+    }
+
+	.container {
+		display: flex;
+		flex-direction: column;
+
+		img {
+			width: 100%;
+		}
+
+        .btns {
+            display: block;
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                width: 150px;
+                padding: 0.8rem 1rem;
+                border-radius: 1%;
+                color: #e5e5e5;
+                background-color: #6c5b7b;
+    
+                &:hover {
+                    transition: 0.3s;
+                    background-color: #365063;
+                }
+            }
+        }
+	}
+}

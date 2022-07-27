@@ -1,0 +1,35 @@
+.mylist {
+    position: relative;
+    min-height: 100vh;
+    
+    .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        &.empty {
+            margin-top: 10rem;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.6rem;
+        }
+
+        .btn-clear {
+            margin: 0 auto;
+            margin-bottom: 12rem;
+            border: none;
+            outline: none;
+            background: none;
+            background-color: $blue;
+            color: #E7E7E7;
+            padding: 0.8rem 3rem;
+            cursor: pointer;
+
+            &:hover {
+                transition: 0.4s;
+                opacity: 0.7;
+            }
+        }
+    }
+}

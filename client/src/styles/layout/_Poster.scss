@@ -1,0 +1,57 @@
+.poster {
+  background: rgba(54, 80, 99, 0.1);
+  background-image: url("../../images/background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 100%;
+  height: 20rem;
+  margin: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  .poster_text {
+    max-width: 50rem;
+    margin: 0 1rem;
+    text-align: center;
+    color: #6c5b7b;
+    font-family: "Dosis", sans-serif;
+    font-size: 30px;
+    letter-spacing: 5%;
+    margin-bottom: -2rem;
+  }
+
+  .poster_btns {
+    display: flex;
+    gap: 4rem;
+    .link {
+      text-decoration: none;
+      padding: 0.7rem 1.8rem 0.4rem 1.8rem;
+      border-radius: 5%;
+
+      &.sign-up {
+        color: #e5e5e5;
+        background-color: #6c5b7b;
+
+        &:hover {
+          transition: 0.3s;
+          background-color: #365063;
+        }
+      }
+
+      &.sign-in {
+        color: $purple;
+        border: solid 1px $purple;
+
+        &:hover {
+          transition: 0.3s;
+          border-color: $blue;
+          background-color: $blue;
+          color: #e5e5e5;
+        }
+      }
+    }
+  }
+}
